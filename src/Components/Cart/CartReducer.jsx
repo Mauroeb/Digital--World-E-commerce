@@ -1,6 +1,7 @@
 import {TYPES} from "./Actions";
 
 
+
 export const cartInitialState = {
     products: [
         {id: 1, name: "Product-A", price: 500,},
@@ -18,6 +19,8 @@ export const cartInitialState = {
 
 
 export function cartReducer(state, action) {
+
+
     switch (action.type) {
         case TYPES.ADD_TO_CART: {
             let newItem = state.products.find((product) => product.id === action.payload);
@@ -26,7 +29,7 @@ export function cartReducer(state, action) {
 
             return itemInCart ? {
                 ...state,
-                cart: state.cart.map(item => item.id === itemInCart.id? {...item, 
+                cart: state.cart.map(item => item.id === itemInCart.id ? {...item, 
                     quantity: item.quantity + 1} : item),
             } : {
                 ...state,
@@ -53,7 +56,9 @@ export function cartReducer(state, action) {
 
             return {
                     ...state,
-                    cart: state.cart.filter(item => item.id !== action.payload)};
+                    cart: state.cart.filter(item => item.id !== action.payload)
+            };
+
         }
 
 

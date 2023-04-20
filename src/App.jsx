@@ -5,16 +5,16 @@ import product4 from "./assets/Carousel-img/cuatro.jpg";
 import product5 from "./assets/Carousel-img/cinco.jpg";
 
 
-import CartIcon from "./Components/Cart/CartIcon";
-import React, { useState } from "react";
-import Carousel from "./components/Carousel";
-import { FaTimes, FaShoppingCart } from "react-icons/fa"
-import { TYPES } from "./components/Cart/Actions"
-import { useReducer } from "react";
-import { cartInitialState, cartReducer } from "./components/Cart/CartReducer";
-import Products from "./components/Cart/Products";
+import Carousel from "./Components/Carousel";
+import { FaShoppingCart } from "react-icons/fa"
+import Products from "./Components/Cart/Products";
 import Footer from "./Components/Footer";
 import 'tailwindcss/tailwind.css';
+import { useContext, useState } from "react";
+import CartContext from "./Components/Contexts/CartContext";
+import Cart from "./Components/Cart/Cart";
+import { Transition } from '@headlessui/react'
+
 
 
 const slides = [
@@ -27,49 +27,30 @@ const slides = [
 
 function App() {
 
-  const [state, dispatch] = useReducer(cartReducer, cartInitialState);
-
-  const {products, cart,} = state;
-
-  const addToCart = (id) => {
-      dispatch({ type: TYPES.ADD_TO_CART, payload: id });
-  };
-
-// deleteAllItems es un booleano - para boton quitar uno es false.
-// para quitar todos es true. - VER componente ItemCart
-  const deleteFromCart = (id, deleteAllItems) => {
-      deleteAllItems ? dispatch({type: TYPES.REMOVE_ALL_ITEMS, payload: id}) : dispatch({type: TYPES.REMOVE_ITEM, payload: id})
-  };
-
-  const [showCart, setShowCart] = useState(false);
-
-  const clearCart = () => {
-      dispatch({ type: TYPES.CLEAR_CART });
-      handleCartToggle();
-
-  };
-
-
-  const handleCartToggle = () => {
-    setShowCart(!showCart);
-  }
-
-
-
+  const { products, isShowing, setIsShowing } = useContext(CartContext);
+  
 
   return (
     <div className="bg-gray-800">
-      {showCart ? (
-        <>
-          <FaTimes className="h-7 w-7 absolute top-10 right-10 z-50 text-white cursor-pointer" onClick={handleCartToggle} />
-          <CartIcon showCart={showCart} cart={cart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
-        </>
-      ) : (
-        <FaShoppingCart className="h-7 w-7 absolute top-10 right-10 z-50 text-white cursor-pointer" onClick={handleCartToggle} />
-      )}
+      <>
+        <FaShoppingCart className="h-7 w-7 absolute top-10 right-10 z-50 text-white cursor-pointer" onClick={() => {
+          setIsShowing((isShowing) => !isShowing)}} />
+        <Transition
+          show={isShowing}
+          enter="transition-opacity duration-75"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity duration-150"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <Cart />
+        </Transition>
+      </>
+
       <Carousel slides={slides} />
 
-      <div>{products.map((product) => {return <Products key={product.id} data={product} addToCart={addToCart} />})}</div>
+      <div>{products.map((product) => {return <Products key={product.id} data={product} />})}</div>
       <Footer />
     </div>
   );

@@ -1,8 +1,12 @@
 import 'tailwindcss/tailwind.css';
 import React from "react";
+import { useContext } from 'react';
+import { CartContext } from '../Contexts/CartContext';
 
-const ItemCart = (props) => {
-    const {data, deleteFromCart} = props;
+const ItemCart = ({data}) => {
+
+
+    const { deleteFromCart } = useContext(CartContext);
 
     return (
         <>

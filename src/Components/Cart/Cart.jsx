@@ -21,9 +21,7 @@ const Cart = () => {
                     setIsShowing((isShowing) => !isShowing)
                 }} />
                 
-                <h1 className="text-4xl text-center py-1 font-Roboto text-white">Productos</h1> 
-                
-                <h2 className="text-center font-Roboto text-3xl text-white mt-4">Carrito</h2>
+                <h1 className="text-4xl text-center py-1 font-Roboto text-white">Cart</h1> 
                 
                 <div>{cart.map((item) => {return <ItemCart key={item.id} data={item} deleteFromCart={deleteFromCart} />})}</div>
                 

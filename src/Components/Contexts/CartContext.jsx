@@ -4,9 +4,6 @@ import { cartInitialState, cartReducer } from "../Cart/CartReducer";
 
 
 
-
-
-
 export const CartContext = createContext();
 
 export const CartProvider = ({children}) => {
@@ -19,6 +16,10 @@ export const CartProvider = ({children}) => {
         dispatch({ type: TYPES.ADD_TO_CART, payload: id });
     };
 
+    const addOneFromCart = (id) => {
+        dispatch({ type: TYPES.ADD_ONE_FROM_CART, payload: id });
+    };
+
     const deleteFromCart = (id, deleteAllItems) => {
         deleteAllItems ? dispatch({type: TYPES.REMOVE_ALL_ITEMS, payload: id}) : dispatch({type: TYPES.REMOVE_ITEM, payload: id})
     };
@@ -26,15 +27,15 @@ export const CartProvider = ({children}) => {
     const clearCart = () => {
         dispatch({ type: TYPES.CLEAR_CART });
         setIsShowing((isShowing) => !isShowing)
-  };
+};
 
-  const [isShowing, setIsShowing] = useState(false)
+const [isShowing, setIsShowing] = useState(false)
 
-  return (
-    <CartContext.Provider value={{addToCart, deleteFromCart, clearCart, products, cart, isShowing, setIsShowing}} >
+return (
+    <CartContext.Provider value={{addToCart, addOneFromCart, deleteFromCart, clearCart, products, cart, isShowing, setIsShowing}} >
         {children}
     </CartContext.Provider>
-  )
-}
+);
+};
 
 export default CartContext

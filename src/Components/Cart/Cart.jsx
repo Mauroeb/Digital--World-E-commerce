@@ -2,14 +2,19 @@ import ItemCart from "./ItemCart";
 import 'tailwindcss/tailwind.css';
 import { useContext } from 'react';
 import { CartContext } from '../Contexts/CartContext';
-import { FaTimes } from "react-icons/fa"
+import { FaTimes } from "react-icons/fa";
+
+/* function totales () {
+    const subtotals = data.map(data => data.price * data.quantity);
+    const total = subtotals.reduce((acc, subtotal) => acc + subtotal, 0);
+    return total;
+} */ /*NO FUNCIONA - TENDRIA QUE DEVOLVER LA SUMA DE LOS SUBTOTALES*/
 
 
+const Cart = ({}) => {
+/* event.preventDefault() */ /* PARA PREVENIR QUE SE BORRE TODO DEL CARRITO CUANDO RECARGO PAGINA*/
 
-
-const Cart = () => {
-
-    const { cart, deleteFromCart, clearCart, setIsShowing } = useContext(CartContext);
+    const { cart, deleteFromCart, clearCart, addOneFromCart, setIsShowing } = useContext(CartContext);
 
     return (
         
@@ -23,11 +28,13 @@ const Cart = () => {
                 
                 <h1 className="text-4xl text-center py-1 font-Roboto text-white">Cart</h1> 
                 
-                <div>{cart.map((item) => {return <ItemCart key={item.id} data={item} deleteFromCart={deleteFromCart} />})}</div>
+                <div>{cart.map((item) => {return <ItemCart key={item.id} data={item} deleteFromCart={deleteFromCart} addOneFromCart={addOneFromCart} />})}</div>
                 
-                <div className="w-full text-center">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mx-8 text-center gap-2">
+                <h5 className='text-white'>Total: ${/* totales() */}</h5>
                     <button className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer " 
                     onClick={() => clearCart()}>Limpiar Carrito</button>
+                    <button className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer ">Pagar</button>
                 </div>
 
             </div>

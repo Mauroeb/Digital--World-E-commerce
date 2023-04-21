@@ -37,6 +37,16 @@ export function cartReducer(state, action) {
             };
         };
 
+        case TYPES.ADD_ONE_FROM_CART: {
+			return {
+				...state,
+				cart: state.cart.map(item =>
+                    item.id === action.payload
+                    ? { ...item, quantity: item.quantity + 1 }
+                    : item),
+			};
+		}
+
         case TYPES.REMOVE_ITEM:
         let itemToRemove = state.cart.find((item) => item.id === action.payload)
         return itemToRemove.quantity > 1 

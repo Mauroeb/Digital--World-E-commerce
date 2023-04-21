@@ -3,10 +3,11 @@ import React from "react";
 import { useContext } from 'react';
 import { CartContext } from '../Contexts/CartContext';
 
-const ItemCart = ({data}) => {
+
+export const ItemCart = ({data}) => {
 
 
-    const { deleteFromCart } = useContext(CartContext);
+    const { deleteFromCart, addOneFromCart } = useContext(CartContext);
 
     return (
         <>
@@ -15,7 +16,8 @@ const ItemCart = ({data}) => {
                 <h5 className='font-bold text-white'>${data.price}</h5>
                 <h5 className='text-white'>Cantidad: {data.quantity}</h5>
                 <h5 className='text-white'>Subtotal: ${data.price*data.quantity}</h5>
-                <button className="bg-yellow-300 text-black font-bold py-1 px-2 my-1 rounded w-28 cursor-pointer mx-auto" onClick={() => deleteFromCart(data.id, false)}>Quitar uno</button>
+                <button className="bg-yellow-300 text-black font-bold py-1 px-2 my-1 rounded w-28 cursor-pointer mx-auto" onClick={() => addOneFromCart(data.id)}>Agregar mas</button>
+                <button className="bg-yellow-300 text-black font-bold py-1 px-2 my-1 rounded w-28 cursor-pointer mx-auto" onClick={() => deleteFromCart(data.id, false)}>Quitar</button>
                 <button className="bg-yellow-300 text-black font-bold py-1 px-2 my-1 rounded w-28 cursor-pointer mx-auto" onClick={() => deleteFromCart(data.id, true)}>Quitar todos</button>
             </div>
             <hr className="border-gray-500 w-11/12 mx-auto my-5"/>

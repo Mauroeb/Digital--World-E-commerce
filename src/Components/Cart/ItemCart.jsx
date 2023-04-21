@@ -3,7 +3,8 @@ import React from "react";
 import { useContext } from 'react';
 import { CartContext } from '../Contexts/CartContext';
 
-
+const ItemCart = ({data}) => {
+    
     const {name, price, quantity, id} = data;
 
     const { deleteFromCart, addToCart } = useContext(CartContext);

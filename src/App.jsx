@@ -6,7 +6,7 @@ import product2 from "./assets/Carousel-img/dos.jpg";
 import product3 from "./assets/Carousel-img/tres.jpg";
 import product4 from "./assets/Carousel-img/cuatro.jpg";
 import product5 from "./assets/Carousel-img/cinco.jpg";
-import Routes from "./Route/Ruta";
+import Ruta from "./Route/Ruta";
 
 
 

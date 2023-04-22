@@ -1,16 +1,19 @@
 import { createContext, useReducer, useState } from "react";
+import { useEffect } from "react";
 import { TYPES } from "../Cart/Actions";
 import { cartInitialState, cartReducer } from "../Cart/CartReducer";
-
-
 
 export const CartContext = createContext();
 
 export const CartProvider = ({children}) => {
 
+
     const [state, dispatch] = useReducer(cartReducer, cartInitialState);
 
+
     const {products, cart,} = state;
+
+
 
     const addToCart = (id) => {
         dispatch({ type: TYPES.ADD_TO_CART, payload: id });

@@ -3,7 +3,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-
 /******   ICONOS DE REACT-ICONS ********/
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';

@@ -22,7 +22,7 @@ const totals = cart.reduce((acc, curr) => {
                     setIsShowing((isShowing) => !isShowing)
                 }} />
                 
-                <h1 className="text-4xl text-center py-1 font-Roboto text-white">Cart</h1> 
+                <h1 className="text-4xl text-center py-1 font-Roboto text-white">Carrito</h1> 
                 
                 <div>{cart.map((item) => {return <ItemCart key={item.id} data={item} deleteFromCart={deleteFromCart} addOneFromCart={addOneFromCart} />})}</div>
                 

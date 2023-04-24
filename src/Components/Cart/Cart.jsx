@@ -29,9 +29,8 @@ const Cart = ({}) => {
                 <h1 className="text-4xl text-center py-1 font-Roboto text-white">Cart</h1> 
                 
                 <div>{cart.map((item) => {return <ItemCart key={item.id} data={item} deleteFromCart={deleteFromCart} addOneFromCart={addOneFromCart} />})}</div>
-                
+
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mx-8 text-center gap-2">
-                <h5 className='text-white'>Total: ${/* totales() */}</h5>
                     <button className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer " 
                     onClick={() => clearCart()}>Limpiar Carrito</button>
                     <button className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer ">Pagar</button>

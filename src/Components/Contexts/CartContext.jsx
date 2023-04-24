@@ -9,6 +9,7 @@ export const CartContext = createContext();
 export const CartProvider = ({children}) => {
 
     const [state, dispatch] = useReducer(cartReducer, cartInitialState);
+    const [isShowing, setIsShowing] = useState(false)
 
     const {products, cart,} = state;
 
@@ -21,7 +22,8 @@ export const CartProvider = ({children}) => {
     };
 
     const deleteFromCart = (id, deleteAllItems) => {
-        deleteAllItems ? dispatch({type: TYPES.REMOVE_ALL_ITEMS, payload: id}) : dispatch({type: TYPES.REMOVE_ITEM, payload: id})
+        deleteAllItems ? dispatch({type: TYPES.REMOVE_ALL_ITEMS, payload: id}) : dispatch({type: TYPES.REMOVE_ITEM, payload: id}),
+        cart.length === 0 ? setIsShowing((isShowing) => !isShowing) : null
     };
 
     const clearCart = () => {
@@ -29,7 +31,6 @@ export const CartProvider = ({children}) => {
         setIsShowing((isShowing) => !isShowing)
 };
 
-const [isShowing, setIsShowing] = useState(false)
 
 return (
     <CartContext.Provider value={{addToCart, addOneFromCart, deleteFromCart, clearCart, products, cart, isShowing, setIsShowing}} >

@@ -12,7 +12,7 @@ const ItemCart = ({data}) => {
     return (
         <>
             <div className='font-Roboto grid grid-rows-3 grid-cols-2 gap-y-[.5rem] lg:grid-cols-4 lg:grid-rows-2 xl:grid-cols-5 xl:grid-rows-1
-             mx-8 text-center gap-2 place-items-center'>
+            mx-8 text-center gap-2 place-items-center'>
                 
                 <h4 className='text-white'>{name}</h4>
                 <h5 className='font-bold text-white'>${price}</h5>

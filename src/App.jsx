@@ -27,7 +27,7 @@ const slides = [
 
 function App() {
 
-  const { products, isShowing, setIsShowing } = useContext(CartContext);
+  const { cart, products, isShowing, setIsShowing } = useContext(CartContext);
   
 
   return (
@@ -43,10 +43,15 @@ function App() {
           leave="transition-opacity duration-150"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
-        >
+          >
           <Cart />
+
         </Transition>
+        {/*INICIO CONTADOR AL LADO DEL CART*/}
+        <span className="h-5 w-5 absolute top-12 right-5 z-50 text-red-700 cursor-pointer bg-red-100 rounded-lg bg-center">{cart.reduce((amount, item) => item.quantity + amount, 0)} </span>
+        {/*FIN CONTADOR AL LADO DEL CART*/}
       </>
+
 
       <Carousel slides={slides} />
 

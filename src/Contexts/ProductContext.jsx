@@ -8,13 +8,15 @@ const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/products")
+      .get("http://localhost:3000/products")
       .then((response) => setProducts(response.data))
       .catch((error) => console.log(error));
+    console.log(products);
   }, []);
+  console.log(products);
 
   return (
-    <ProductContext.Provider products={products} value={{ products }}>
+    <ProductContext.Provider value={{ products }}>
       {children}
     </ProductContext.Provider>
   );

@@ -5,7 +5,7 @@ import { CartContext } from '../Contexts/CartContext';
 import { FaTimes } from "react-icons/fa";
 
 
-const Cart = () => {
+const Cart = ({handleNothingInCart}) => {
 
     const { cart, deleteFromCart, clearCart, addOneFromCart, isShowing, setIsShowing } = useContext(CartContext);
 /* FUNCION PARA CALCULAR TOTAL*/

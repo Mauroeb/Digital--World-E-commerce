@@ -29,19 +29,29 @@ function App() {
 
   const { cart, products, isShowing, setIsShowing } = useContext(CartContext);
   
+  const [ nothingInCart, setIsNothingInCart ] = useState(false)
+
+  const handleNothingInCart = () => {
+    setIsNothingInCart(nothingInCart => !nothingInCart);
+    setTimeout( () =>{
+      setIsNothingInCart(nothingInCart => !nothingInCart)
+    }, 1000)
+  }
+  
 
   return (
     <div className="bg-gray-800">
       <div>
         <FaShoppingCart className="h-[1.75rem] w-[1.75rem] absolute top-[2.5rem] right-[2.5rem] z-50 text-white cursor-pointer" onClick={() => {
-          setIsShowing((isShowing) => !isShowing)}} />
+          setIsShowing((isShowing) => !isShowing);
+          handleNothingInCart()}} />
 
         {cart.length > 0 ? 
         <div className="h-[1.5rem] w-[1.5rem] absolute top-[1.5rem] right-[1.5rem] z-50 font-bold text-white text-center bg-red-500 rounded-full cursor-pointer">{cart.length}</div> : null}
 
         {isShowing && cart.length > 0 ? 
-        <Cart /> : 
-        isShowing && cart.length === 0 ? (
+        <Cart handleNothingInCart={handleNothingInCart}/> : 
+        nothingInCart ? (
           <div className="relative">
             <div className="absolute w-[13rem] h-[8rem] md:w-[15rem] md:h-[9rem] lg:w-[20rem] lg:h-[11rem] bg-gray-800 mx-auto top-[8rem] left-1/2 transform -translate-x-1/2 
             z-40 rounded-md border-2 border-gray-500 text-white font-bold text-[1.3rem] md:text-[1.7rem] lg:text-[2.1rem] grid place-items-center">No items found!
@@ -52,8 +62,6 @@ function App() {
             </div>
           </div>
         ) : null}
-
-
     </div>
 
 

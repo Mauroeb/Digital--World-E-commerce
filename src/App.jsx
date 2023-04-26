@@ -21,7 +21,7 @@ const slides = [
 
 const App = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden max-sm">
       <Router>
         <Carousel slides={slides} />
         <Routes>

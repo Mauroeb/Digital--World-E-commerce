@@ -13,7 +13,6 @@ const ProductProvider = ({ children }) => {
       .catch((error) => console.log(error));
     console.log(products);
   }, []);
-  console.log(products);
 
   return (
     <ProductContext.Provider value={{ products }}>

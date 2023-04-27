@@ -1,6 +1,6 @@
 import Footer from "./Components/Footer";
 import Carousel from "./Components/Carousel";
-import Navbar from "./Components/Navbar/Navbar";
+import Navbar from "./Components/Navbar";
 
 import product1 from "./assets/Carousel-img/uno.jpg";
 import product2 from "./assets/Carousel-img/dos.jpg";

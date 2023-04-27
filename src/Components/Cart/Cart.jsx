@@ -3,6 +3,7 @@ import 'tailwindcss/tailwind.css';
 import { useContext } from 'react';
 import { CartContext } from '../Contexts/CartContext';
 import { FaTimes } from "react-icons/fa";
+import Swal from "sweetalert2" /*IMPORTANDO SWEET ALERT2*/
 
 
 const Cart = ({handleNothingInCart}) => {
@@ -14,6 +15,18 @@ const totals = cart.reduce((acc, curr) => {
 }, 0);
 /* FIN FUNCION CALCULAR TOTAL*/
 
+/*FUNCION SWEETALERT - ES LLAMADA EN EL ONCLICK*/
+
+const succesPay = () =>{
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Pago Exitoso',
+        showConfirmButton: false,
+        timer: 1500
+    })
+}
+/*FIN FUNCION SWEETALERT - ES LLAMADA EN EL ONCLICK*/
 
 
     return (
@@ -35,8 +48,9 @@ const totals = cart.reduce((acc, curr) => {
                     <div className="flex flex-col items-center sm:flex-row justify-center col-span-6 gap-[3rem]">
                         <button className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer h-[2rem] w-[10rem] sm:me-[1rem]" 
                         onClick={() => clearCart()}>Limpiar Carrito</button>
-                        <button className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer h-[2rem] w-[10rem] sm:ms-[1rem]" onClick={() => {
-                            alert('Payment successfull');
+                        <button className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer h-[2rem] w-[10rem] sm:ms-[1rem]"
+                        onClick={() => {
+                            succesPay()
                             setIsShowing(isShowing => !isShowing);
                             clearCart()
                         }}>Pagar</button>

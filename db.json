@@ -1,0 +1,214 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "/images/product1.png",
+      "name": "Auriculares Gaming Teros",
+      "description": "This is product 1",
+      "price": 10.99
+    },
+    {
+      "id": 2,
+      "image": "/images/product2.png",
+      "name": "Product 2",
+      "description": "This is product 2",
+      "price": 20.99
+    },
+    {
+      "id": 3,
+      "image": "/images/product3.png",
+      "name": "Product 3",
+      "description": "This is product 3",
+      "price": 30.99
+    },
+    {
+      "id": 4,
+      "image": "/images/product4.png",
+      "name": "Product 4",
+      "description": "This is product 4",
+      "price": 40.99
+    },
+    {
+      "id": 5,
+      "image": "/images/product5.png",
+      "name": "Product 5",
+      "description": "This is product 5",
+      "price": 50.99
+    },
+    {
+      "id": 6,
+      "image": "/images/product6.png",
+      "name": "Product 6",
+      "description": "This is product 6",
+      "price": 60.99
+    },
+    {
+      "id": 7,
+      "image": "/images/product7.png",
+      "name": "Product 7",
+      "description": "This is product 7",
+      "price": 70.99
+    },
+    {
+      "id": 8,
+      "image": "/images/product8.png",
+      "name": "Product 8",
+      "description": "This is product 8",
+      "price": 80.99
+    },
+    {
+      "id": 9,
+      "image": "/images/product9.png",
+      "name": "Product 9",
+      "description": "This is product 9",
+      "price": 90.99
+    },
+    {
+      "id": 10,
+      "image": "/images/product10.png",
+      "name": "Product 10",
+      "description": "This is product 10",
+      "price": 100.99
+    },
+    {
+      "id": 11,
+      "image": "/images/product11.png",
+      "name": "Product 11",
+      "description": "This is product 11",
+      "price": 110.99
+    },
+    {
+      "id": 12,
+      "image": "/images/product12.png",
+      "name": "Product 12",
+      "description": "This is product 12",
+      "price": 120.99
+    },
+    {
+      "id": 13,
+      "image": "/images/product13.png",
+      "name": "Product 13",
+      "description": "This is product 13",
+      "price": 130.99
+    },
+    {
+      "id": 14,
+      "image": "/images/product14.png",
+      "name": "Product 14",
+      "description": "This is product 14",
+      "price": 140.99
+    },
+    {
+      "id": 15,
+      "image": "/images/product15.png",
+      "name": "Product 15",
+      "description": "This is product 15",
+      "price": 140.99
+    },
+    {
+      "id": 16,
+      "image": "/images/product16.png",
+      "name": "Product 16",
+      "description": "This is product 16",
+      "price": 150.99
+    },
+    {
+      "id": 17,
+      "image": "/images/product17.png",
+      "name": "Product 17",
+      "description": "This is product 17",
+      "price": 160.99
+    },
+    {
+      "id": 18,
+      "image": "/images/product18.png",
+      "name": "Product 18",
+      "description": "This is product 18",
+      "price": 170.99
+    },
+    {
+      "id": 19,
+      "image": "/images/product19.png",
+      "name": "Product 19",
+      "description": "This is product 19",
+      "price": 180.99
+    },
+    {
+      "id": 20,
+      "image": "/images/product20.png",
+      "name": "Product 20",
+      "description": "This is product 20",
+      "price": 190.99
+    },
+    {
+      "id": 21,
+      "image": "/images/product21.png",
+      "name": "Product 21",
+      "description": "This is product 21",
+      "price": 200.99
+    },
+    {
+      "id": 22,
+      "image": "/images/product22.png",
+      "name": "Product 22",
+      "description": "This is product 22",
+      "price": 210.99
+    },
+    {
+      "id": 23,
+      "image": "/images/product23.png",
+      "name": "Product 23",
+      "description": "This is product 23",
+      "price": 220.99
+    },
+    {
+      "id": 24,
+      "image": "/images/product24.png",
+      "name": "Product 24",
+      "description": "This is product 24",
+      "price": 230.99
+    },
+    {
+      "id": 25,
+      "image": "/images/product25.png",
+      "name": "Product 25",
+      "description": "This is product 25",
+      "price": 220.99
+    },
+    {
+      "id": 26,
+      "image": "/images/product26.png",
+      "name": "Product 26",
+      "description": "This is product 26",
+      "price": 230.99
+    },
+    {
+      "id": 23,
+      "image": "/images/product23.png",
+      "name": "Product 23",
+      "description": "This is product 23",
+      "price": 220.99
+    },
+    {
+      "id": 24,
+      "image": "/images/product24.png",
+      "name": "Product 24",
+      "description": "This is product 24",
+      "price": 230.99
+    },
+    {
+      "id": 25,
+      "image": "/images/product25.png",
+      "name": "Product 25",
+      "description": "This is product 25",
+      "price": 220.99
+    },
+    {
+      "id": 26,
+      "image": "/images/product26.png",
+      "name": "Product 26",
+      "description": "This is product 26",
+      "price": 230.99
+    }
+  ]
+}

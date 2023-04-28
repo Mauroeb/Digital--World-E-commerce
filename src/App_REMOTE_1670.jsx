@@ -10,7 +10,6 @@ import product2 from "./assets/Carousel-img/dos.jpg";
 import product3 from "./assets/Carousel-img/tres.jpg";
 import product4 from "./assets/Carousel-img/cuatro.jpg";
 import product5 from "./assets/Carousel-img/cinco.jpg";
-import Ruta from "./Route/Ruta";
 
 const slides = [
   { id: 1, productImage: product1 },
@@ -21,16 +20,6 @@ const slides = [
 ];
 
 const App = () => {
-<<<<<<< HEAD
-  return ( 
-  <>
-  <Carousel slides={slides}/>
-  <Ruta />
-  <Footer />
-  </>
-
-  )
-=======
   return (
     <div className="overflow-hidden max-sm">
       <Router>
@@ -42,7 +31,6 @@ const App = () => {
       </Router>
     </div>
   );
->>>>>>> 5128424c1422eebf00153072dca13e7c9eb7b018
 };
 
 export default App;

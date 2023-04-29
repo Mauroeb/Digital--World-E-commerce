@@ -11,7 +11,6 @@ const ProductProvider = ({ children }) => {
       .get("http://localhost:3000/products")
       .then((response) => setProducts(response.data))
       .catch((error) => console.log(error));
-    console.log(products);
   }, []);
 
   return (
@@ -19,6 +18,6 @@ const ProductProvider = ({ children }) => {
       {children}
     </ProductContext.Provider>
   );
-};
+}
 
 export default ProductProvider;

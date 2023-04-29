@@ -1,12 +1,12 @@
 import ItemCart from "./ItemCart";
 import 'tailwindcss/tailwind.css';
 import { useContext } from 'react';
-import { CartContext } from '../Contexts/CartContext';
+import { CartContext } from '../../Contexts/CartContext';
 import { FaTimes } from "react-icons/fa";
 import Swal from "sweetalert2" /*IMPORTANDO SWEET ALERT2*/
 
 
-const Cart = ({handleNothingInCart}) => {
+const Cart = () => {
 
     const { cart, deleteFromCart, clearCart, addOneFromCart, isShowing, setIsShowing } = useContext(CartContext);
 /* FUNCION PARA CALCULAR TOTAL*/

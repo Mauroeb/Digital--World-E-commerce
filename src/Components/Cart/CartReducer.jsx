@@ -3,17 +3,7 @@ import {TYPES} from "./Actions";
 
 
 export const cartInitialState = {
-    products: [
-        {id: 1, name: "Product-A", price: 500,},
-        {id: 2, name: "Product-B", price: 600},
-        {id: 3, name: "Product-C", price: 700},
-        {id: 4, name: "Product-D", price: 800},
-        {id: 5, name: "Product-E", price: 900},
-        {id: 6, name: "Product-F", price: 1000},
-        {id: 7, name: "Product-G", price: 1100},
-        {id: 8, name: "Product-H", price: 1200},
-        {id: 9, name: "Product-I", price: 1300}
-    ],
+    products: [],
     cart: [],
 };
 

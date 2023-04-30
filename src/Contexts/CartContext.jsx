@@ -1,7 +1,6 @@
 import { createContext, useReducer, useState } from "react";
-import { useEffect } from "react";
-import { TYPES } from "../Cart/Actions";
-import { cartInitialState, cartReducer } from "../Cart/CartReducer";
+import { TYPES } from "../Components/Cart/Actions";
+import { cartInitialState, cartReducer } from "../Components/Cart/CartReducer";
 
 export const CartContext = createContext();
 

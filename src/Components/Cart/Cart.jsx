@@ -1,7 +1,7 @@
 import ItemCart from "./ItemCart";
 import 'tailwindcss/tailwind.css';
 import { useContext } from 'react';
-import { CartContext } from '../Contexts/CartContext';
+import { CartContext } from '../../Contexts/CartContext';
 import { FaTimes } from "react-icons/fa";
 import Swal from "sweetalert2" /*IMPORTANDO SWEET ALERT2*/
 

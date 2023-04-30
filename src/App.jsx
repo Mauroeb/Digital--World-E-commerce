@@ -11,6 +11,8 @@ import product3 from "./assets/Carousel-img/tres.jpg";
 import product4 from "./assets/Carousel-img/cuatro.jpg";
 import product5 from "./assets/Carousel-img/cinco.jpg";
 import Announcement from "./Components/Announcement";
+import { Content } from "./Styled";
+import ScrollButton from "./Components/ScrollButton";
 
 const slides = [
   { id: 1, productImage: product1 },
@@ -26,6 +28,8 @@ const App = () => {
       <Router>
         <Announcement />
         <Carousel slides={slides} />
+        <Content />
+          <ScrollButton />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

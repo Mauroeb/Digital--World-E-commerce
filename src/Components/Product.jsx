@@ -1,10 +1,7 @@
 import React, { useContext } from "react";
-import { ProductContext } from "../Contexts/ProductContext";
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-  const { products } = useContext(ProductContext);
-  const { id, image, name, description, price } = product;
 
   return (
     <div className="w-full p-2 hover:drop-shadow-2xl bg-white rounded-lg relative shadow-lg">
@@ -25,7 +22,7 @@ const Product = ({ product }) => {
       </div>
       {/* name , description , price */}
       <div className="mt-3 flex flex-col mx-2">
-        <Link to={`/product/${id}`}>
+        <Link to={`/product/${product.id}`}>
           <h2 className="font-semibold mb-1 text-xl">{product.name}</h2>
         </Link>
         <div className="mt-1 text-slate-400">{product.description}</div>

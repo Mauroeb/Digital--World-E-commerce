@@ -8,7 +8,7 @@ import Swal from "sweetalert2" /*IMPORTANDO SWEET ALERT2*/
 
 const Cart = () => {
 
-    const { cart, deleteFromCart, clearCart, addOneFromCart, isShowing, setIsShowing } = useContext(CartContext);
+    const { cart, deleteFromCart, clearCart, addOneFromCart, setIsShowing, updateState } = useContext(CartContext);
 /* FUNCION PARA CALCULAR TOTAL*/
 const totals = cart.reduce((acc, curr) => {
     return acc + curr.quantity * curr.price;
@@ -47,12 +47,13 @@ const succesPay = () =>{
                     <h5 className='text-white text-[1.4rem] text-yellow-300 text-bold col-span-full text-center'>Total: $ {totals}</h5>
                     <div className="flex flex-col items-center sm:flex-row justify-center col-span-6 gap-[3rem]">
                         <button className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer h-[2rem] w-[10rem] sm:me-[1rem]" 
-                        onClick={() => clearCart()}>Limpiar Carrito</button>
+                        onClick={() => {clearCart(); updateState()}}>Limpiar Carrito</button>
                         <button className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer h-[2rem] w-[10rem] sm:ms-[1rem]"
                         onClick={() => {
                             succesPay()
                             setIsShowing(isShowing => !isShowing);
-                            clearCart()
+                            clearCart();
+                            updateState()
                         }}>Pagar</button>
                     </div>
                 </div>

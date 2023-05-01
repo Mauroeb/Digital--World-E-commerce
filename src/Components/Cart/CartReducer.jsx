@@ -13,8 +13,6 @@ export const cartInitialState = {
 export function cartReducer(state, action) {
 
 
-
-
     switch (action.type) {
         case TYPES.ADD_TO_CART: {
             let newItem = state.products.find((product) => product.id === action.payload);
@@ -56,12 +54,10 @@ export function cartReducer(state, action) {
         };
 
         case TYPES.REMOVE_ALL_ITEMS: {
-
             return {
                     ...state,
                     cart: state.cart.filter(item => item.id !== action.payload)
             };
-
         }
 
 
@@ -69,8 +65,18 @@ export function cartReducer(state, action) {
             return cartInitialState;
         }
 
+        case TYPES.READ_STATE: {
+            return {
+                ...state, 
+                products: action.payload[0],
+                cart: action.payload[1]
+            }
+            
+        }
+        
         default:
             return state;
 
     }
+    
 }

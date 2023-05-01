@@ -182,5 +182,6 @@
       "description": "This is product 26",
       "price": 230.99
     }
-  ]
+  ], 
+  "cart": []
 }

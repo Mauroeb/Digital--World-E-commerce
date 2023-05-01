@@ -1,6 +1,7 @@
-import { createContext, useReducer, useState } from "react";
+import { createContext, useReducer, useState, useEffect } from "react";
 import { TYPES } from "../Components/Cart/Actions";
 import { cartInitialState, cartReducer } from "../Components/Cart/CartReducer";
+import axios from "axios";
 
 export const CartContext = createContext();
 
@@ -31,11 +32,25 @@ export const CartProvider = ({children}) => {
     const clearCart = () => {
         dispatch({ type: TYPES.CLEAR_CART });
         setIsShowing((isShowing) => !isShowing)
-};
+    };
 
+    const updateState = async () => {
+        const productsURL = "http://localhost:3000/products";
+        const cartURL = "http://localhost:3000/cart";
+        const resProducts = await axios.get(productsURL);
+        const resCart = await axios.get(cartURL);
+        const newProduct = await resProducts.data;
+        const newCartItem = await resCart.data
+
+        dispatch({type: TYPES.READ_STATE, payload: [newProduct, newCartItem]})
+    }
+
+    useEffect( () => {
+        updateState()
+    }, [])
 
 return (
-    <CartContext.Provider value={{addToCart, addOneFromCart, deleteFromCart, clearCart, products, cart, isShowing, setIsShowing}} >
+    <CartContext.Provider value={{addToCart, addOneFromCart, deleteFromCart, clearCart, products, cart, isShowing, setIsShowing, updateState}} >
         {children}
     </CartContext.Provider>
 );

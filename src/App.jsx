@@ -18,7 +18,6 @@ import product5 from "./assets/Carousel-img/cinco.jpg";
 
 import { Content } from "./Styled";
 import { FaShoppingCart } from "react-icons/fa";
-import { FaTimes } from "react-icons/fa";
 
 
 
@@ -41,6 +40,7 @@ const App = () => {
     setTimeout( () =>{
       setIsNothingInCart(nothingInCart => !nothingInCart)
     }, 1000)
+    clearTimeout(handleNothingInCart)
   }
 
   return (
@@ -54,18 +54,17 @@ const App = () => {
               handleNothingInCart()}} />
 
             {cart.length > 0 ? 
-            <div className="h-[1.5rem] w-[1.5rem] absolute top-[1.5rem] right-[1.5rem] z-50 font-bold text-white text-center bg-red-500 rounded-full cursor-pointer">{cart.length}</div> : null}
+            <div className="h-[1.5rem] w-[1.5rem] absolute top-[1.5rem] right-[1.5rem] z-50 
+            font-bold text-white text-center bg-red-500 rounded-full cursor-pointer">{cart.length}</div> : null}
 
             {isShowing && cart.length > 0 ? 
             <Cart handleNothingInCart={handleNothingInCart}/> : 
             nothingInCart ? (
               <div className="relative">
-                <div className="absolute w-[13rem] h-[8rem] md:w-[15rem] md:h-[9rem] lg:w-[20rem] lg:h-[11rem] bg-gray-800 mx-auto top-[8rem] left-1/2 transform -translate-x-1/2 
-                z-40 rounded-md border-2 border-gray-500 text-white font-bold text-[1.3rem] md:text-[1.7rem] lg:text-[2.1rem] grid place-items-center">No items found!
-
-                    <FaTimes className="absolute text-white z-50 h-[10rem] w-[.7rem] top-[-4rem] right-[.5rem] cursor-pointer" onClick={ () => {
-                        setIsShowing((isShowing) => !isShowing)
-                    }} />
+                <div className="absolute w-[13rem] h-[8rem] md:w-[15rem] md:h-[9rem] lg:w-[20rem] 
+                lg:h-[11rem] bg-gray-800 mx-auto top-[8rem] left-1/2 transform -translate-x-1/2 
+                z-40 rounded-md border-2 border-gray-500 text-white font-bold text-[1.3rem] 
+                md:text-[1.7rem] lg:text-[2.1rem] grid place-items-center">No items found!
                 </div>
               </div>
             ) : null}

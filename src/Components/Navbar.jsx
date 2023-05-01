@@ -14,14 +14,17 @@ const Navbar = () => {
   return (
     <>
     <NavContainer>
-        <h2><span>Digital</span> World</h2>
+       <div className='logo'>
+        <a href="">
+        <img src="../../public/Navbar-img/LOGO.png" alt="Logo" />
+        </a>
+        </div>
         {/* cuando clicked es true se setea la clase active y cuando no lo sea, no se setea nada */}
         <div className={`linksNav ${clicked ? 'active' : ''}`}>
           <a href="">Home</a>
-          <a href="">Shop</a>
-          <a href="">About</a>
+          <a href="">Products</a>
+          <a href="">About us</a>
           <a href="">Contact</a>
-          <a href="">Blog</a>
         </div>
         <BackDiv className={`initial ${clicked ? 'active' : ''}`}></BackDiv>
         <div className='burguerMenu'>
@@ -35,15 +38,9 @@ const Navbar = () => {
 export default Navbar
 
 const NavContainer = styled.nav`
-h2{
-  z-index: 1000;
-  color: white;
-    font-weight: 400px;
-    span{
-        font-weight: bold;
-        color: #00faff;;
-    }
-    margin-bottom: 30px;
+.logo{
+    z-index: 1000;
+    height: 60px;
 }
 padding: .9rem;
 background-color: #00071a;
@@ -63,7 +60,7 @@ a{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  transition: all .5s ease ;
+  transition: all .5s ease;
   a{
     color: white;
     font-size: 2rem;

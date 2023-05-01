@@ -73,6 +73,9 @@ a{
       font-size: 1rem;
       color: white;
       display: inline;
+      &:hover{
+        color: #00adf6;
+      }
     }
   }
 }
@@ -91,6 +94,9 @@ a{
     font-size: 2rem;
     margin-top: 1rem;
     color: white;
+    &:hover{
+        color: #00adf6;
+      }
   }
 }
 

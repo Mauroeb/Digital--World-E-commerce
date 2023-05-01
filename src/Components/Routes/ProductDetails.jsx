@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Product4 = () => {
+const Product4 = ({products}) => {
     const [rotate, setRotate] = useState(false);
     const [count, setCount] = useState(0);
 

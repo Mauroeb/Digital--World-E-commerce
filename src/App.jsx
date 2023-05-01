@@ -31,19 +31,6 @@ const slides = [
 ];
 
 const App = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return ( 
-  <>
-  <Carousel slides={slides}/>
-  <Ruta />
-  <Footer />
-  </>
-
-  )
-=======
-=======
-
   const { cart, products, isShowing, setIsShowing } = useContext(CartContext);
   
   const [ nothingInCart, setIsNothingInCart ] = useState(false)
@@ -56,7 +43,7 @@ const App = () => {
     clearTimeout(handleNothingInCart)
   }
 
->>>>>>> cbd7e6659d100d36e8160bbd93761540c606ba1a
+
   return (
     <div className="overflow-hidden max-sm">
 
@@ -96,7 +83,7 @@ const App = () => {
       </Router>
     </div>
   );
->>>>>>> 5128424c1422eebf00153072dca13e7c9eb7b018
+
 };
 
 export default App;

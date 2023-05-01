@@ -4,7 +4,9 @@ import styled from 'styled-components';
   
 export const Content = styled.div`
    overflow-Y:scroll;
-   height: 2500px;
+   height: 300px;
+   
+   
 `;
   
 export const Button = styled.div`

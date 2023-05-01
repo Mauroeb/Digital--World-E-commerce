@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
     <NavContainer>
-        <h2>Navbar <span>Responsive</span></h2>
+        <h2><span>Digital</span> World</h2>
         {/* cuando clicked es true se setea la clase active y cuando no lo sea, no se setea nada */}
         <div className={`linksNav ${clicked ? 'active' : ''}`}>
           <a href="">Home</a>
@@ -41,9 +41,11 @@ h2{
     font-weight: 400px;
     span{
         font-weight: bold;
+        color: #00faff;;
     }
+    margin-bottom: 30px;
 }
-padding: .4rem;
+padding: .9rem;
 background-color: #00071a;
 display: flex;
 align-items: center;

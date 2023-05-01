@@ -13,7 +13,7 @@ import { mobile } from "../responsive";
 const Container = styled.div`
   display: flex;
   ${mobile({ flexDirection: "column" })};
-  background-color: #9ae8f4;
+  background-color: #006ca0;
 `;
 
 const Left = styled.div`
@@ -61,11 +61,21 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  display: contents;
+  
 `;
 
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  color: black;
+  :hover {
+    box-shadow: 1px 1px 10px ;
+    color:#FFEFC5;
+    transition:0.3s;
+    
+  }
+  
 `;
 
 const Right = styled.div`
@@ -97,30 +107,41 @@ const Footer = () => {
         </Desc>
 
         <SocialContainer>
-          <SocialIcon color="3B5999">
-            <Facebook />
+        <SocialIcon color="3B5999">
+        <a target="_framename" href="https://es-la.facebook.com/"><Facebook/></a> 
           </SocialIcon>
           <SocialIcon color="E4405F">
-            <Instagram />
+          <a target="_framename" href="https://www.instagram.com/"><Instagram/></a> 
           </SocialIcon>
           <SocialIcon color="55ACEE">
-            <Twitter />
+          <a target="_framename" href="https://twitter.com/?lang=es"><Twitter/></a>
           </SocialIcon>
           <SocialIcon color="E60023">
-            <Pinterest />
+          <a target="_framename" href="https://ar.pinterest.com/"><Pinterest/></a>
           </SocialIcon>
         </SocialContainer>
       </Left>
       <Center>
         <Title>Useful Links</Title>
         <List>
-          <ListItem>Cart</ListItem>
+        <a href="/">
+        <ListItem>Home</ListItem>
+          </a>
 
-          <ListItem>Products</ListItem>
-          <ListItem>My Account</ListItem>
-          <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Terms</ListItem>
+          <a href="/Cart">
+            <ListItem>Cart</ListItem>
+          </a>
+
+          <a href="/Products">
+            <ListItem>Products</ListItem>
+          </a>
+
+          <a href="/My Account">
+            <ListItem>My Account</ListItem>
+          </a>
+          <a href="/Terms">
+            <ListItem>Terms</ListItem>
+          </a>
         </List>
       </Center>
       <Right>

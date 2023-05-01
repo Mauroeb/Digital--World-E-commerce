@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import { ProductContext } from "../Contexts/ProductContext";
 import { Link } from "react-router-dom";
+import CartContext from "../Contexts/CartContext";
+
 
 const Product = ({ product }) => {
-  const { products } = useContext(ProductContext);
-  const { id, image, name, description, price } = product;
+
+  const { addToCart } = useContext(CartContext)
 
   return (
     <div className="w-full p-2 hover:drop-shadow-2xl bg-white rounded-lg relative shadow-lg">
@@ -25,7 +26,7 @@ const Product = ({ product }) => {
       </div>
       {/* name , description , price */}
       <div className="mt-3 flex flex-col mx-2">
-        <Link to={`/product/${id}`}>
+        <Link to={`/product/${product.id}`}>
           <h2 className="font-semibold mb-1 text-xl">{product.name}</h2>
         </Link>
         <div className="mt-1 text-slate-400">{product.description}</div>
@@ -38,7 +39,9 @@ const Product = ({ product }) => {
           <div className="font-bold  text-2xl bottom-5">$ {product.price}</div>
           <button
             className="bg-zinc-800 text-white hover:bg-zinc-950 font-bold
-         p-2 px-4  flex items-center justify-center rounded-xl"
+         p-2 px-4  flex items-center justify-center rounded-xl" onClick={ () => {
+          addToCart(product.id)
+         }}
           >
             Add to Cart
           </button>

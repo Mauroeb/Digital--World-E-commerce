@@ -1,9 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useContext, useState } from "react";
 
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer";
 import Carousel from "./Components/Carousel";
+import Announcement from "./Components/Announcement";
+import ScrollButton from "./Components/ScrollButton";
+import Cart from "./Components/Cart/Cart";
+import CartContext from "./Contexts/CartContext";
 
 import product1 from "./assets/Carousel-img/uno.jpg";
 import product2 from "./assets/Carousel-img/dos.jpg";
@@ -11,6 +16,11 @@ import product3 from "./assets/Carousel-img/tres.jpg";
 import product4 from "./assets/Carousel-img/cuatro.jpg";
 import product5 from "./assets/Carousel-img/cinco.jpg";
 import Ruta from "./Route/Ruta";
+
+import { Content } from "./Styled";
+import { FaShoppingCart } from "react-icons/fa";
+
+
 
 const slides = [
   { id: 1, productImage: product1 },
@@ -22,6 +32,7 @@ const slides = [
 
 const App = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return ( 
   <>
   <Carousel slides={slides}/>
@@ -31,10 +42,53 @@ const App = () => {
 
   )
 =======
+=======
+
+  const { cart, products, isShowing, setIsShowing } = useContext(CartContext);
+  
+  const [ nothingInCart, setIsNothingInCart ] = useState(false)
+
+  const handleNothingInCart = () => {
+    setIsNothingInCart(nothingInCart => !nothingInCart);
+    setTimeout( () =>{
+      setIsNothingInCart(nothingInCart => !nothingInCart)
+    }, 1000)
+    clearTimeout(handleNothingInCart)
+  }
+
+>>>>>>> cbd7e6659d100d36e8160bbd93761540c606ba1a
   return (
     <div className="overflow-hidden max-sm">
+
       <Router>
+         <div className="bg-gray-800">
+          <div>
+            <FaShoppingCart className="h-[1.75rem] w-[1.75rem] absolute top-[2.5rem] right-[2.5rem] z-50 text-white cursor-pointer" onClick={() => {
+              setIsShowing((isShowing) => !isShowing);
+              handleNothingInCart()}} />
+
+            {cart.length > 0 ? 
+            <div className="h-[1.5rem] w-[1.5rem] absolute top-[1.5rem] right-[1.5rem] z-50 
+            font-bold text-white text-center bg-red-500 rounded-full cursor-pointer">{cart.length}</div> : null}
+
+            {isShowing && cart.length > 0 ? 
+            <Cart handleNothingInCart={handleNothingInCart}/> : 
+            nothingInCart ? (
+              <div className="relative">
+                <div className="absolute w-[13rem] h-[8rem] md:w-[15rem] md:h-[9rem] lg:w-[20rem] 
+                lg:h-[11rem] bg-gray-800 mx-auto top-[8rem] left-1/2 transform -translate-x-1/2 
+                z-40 rounded-md border-2 border-gray-500 text-white font-bold text-[1.3rem] 
+                md:text-[1.7rem] lg:text-[2.1rem] grid place-items-center">No items found!
+                </div>
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        <Announcement />
         <Carousel slides={slides} />
+        <Content />
+          <ScrollButton />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

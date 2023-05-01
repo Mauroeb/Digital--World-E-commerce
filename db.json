@@ -181,34 +181,7 @@
       "name": "Product 26",
       "description": "This is product 26",
       "price": 230.99
-    },
-    {
-      "id": 23,
-      "image": "/images/product23.png",
-      "name": "Product 23",
-      "description": "This is product 23",
-      "price": 220.99
-    },
-    {
-      "id": 24,
-      "image": "/images/product24.png",
-      "name": "Product 24",
-      "description": "This is product 24",
-      "price": 230.99
-    },
-    {
-      "id": 25,
-      "image": "/images/product25.png",
-      "name": "Product 25",
-      "description": "This is product 25",
-      "price": 220.99
-    },
-    {
-      "id": 26,
-      "image": "/images/product26.png",
-      "name": "Product 26",
-      "description": "This is product 26",
-      "price": 230.99
     }
-  ]
+  ], 
+  "cart": []
 }

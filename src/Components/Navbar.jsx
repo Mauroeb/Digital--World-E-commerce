@@ -16,7 +16,7 @@ const Navbar = () => {
     <NavContainer>
        <div className='logo'>
         <a href="">
-        <img src="../../public/Navbar-img/LOGO.png" alt="Logo" />
+        <img src="../../public/Navbar-img/logo.png" alt="Logo" />
         </a>
         </div>
         {/* cuando clicked es true se setea la clase active y cuando no lo sea, no se setea nada */}
@@ -40,18 +40,21 @@ export default Navbar
 const NavContainer = styled.nav`
 .logo{
     z-index: 1000;
-    height: 60px;
+    height: 70px;
 }
+
 padding: .9rem;
 background-color: #00071a;
 display: flex;
 align-items: center;
 justify-content: space-between;
+
 a{
   color: white;
   text-decoration: none;
   margin-right: 1rem;
 }
+
 .linksNav{
   position: absolute;
   top: -700px;
@@ -61,11 +64,13 @@ a{
   margin-right: auto;
   text-align: center;
   transition: all .5s ease;
+
   a{
     color: white;
     font-size: 2rem;
     display: block;
   }
+
   @media(min-width: 768px){
     position: initial;
     margin: 0;
@@ -79,6 +84,7 @@ a{
     }
   }
 }
+
 .linksNav.active{
   width: 100%;
   display: block;

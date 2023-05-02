@@ -8,9 +8,9 @@ const Home = () => {
 
   return (
     <div>
-      <section className="py-16 ">
+      <section className="">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-2 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-2">
             {products.map((products) => (
               <Product product={products} key={products.id} />
             ))}

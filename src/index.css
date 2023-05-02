@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply bg-zinc-200;
+    @apply bg-zinc-950;
     font-family: "Poppins", sans-serif;
   }
 }

@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../Contexts/CartContext";
 
-const Product = ({ product }) => {
-  const { addToCart } = useContext(CartContext);
 
+const Product = ({ product,data }) => {
+  const { addToCart } = useContext(CartContext);
+  
   return (
-    <div className="w-full p-2 hover:drop-shadow-2xl bg-zinc-800 rounded-lg  shadow-lg">
+    <div className="w-full lg:w-[300px] mb-10 p-2 hover:drop-shadow-2xl bg-zinc-800 rounded-lg  shadow-lg">
       <div
         className="flex justify-center items-center 
         overflow-hidden group transition container mx-auto"
@@ -25,22 +26,22 @@ const Product = ({ product }) => {
       {/* name , description , price */}
       <div className="mt-3 flex flex-col mx-2">
         <Link to={`/product/${product.id}`}>
-          <h2 className="font-semibold mb-1 text-xl text-teal-500">
+          <h2 className="font-semibold mb-1 text-xl text-amber-500">
             {product.name}
           </h2>
         </Link>
-        <div className="mt-1 text-violet-300">{product.description}</div>
+        <div className="mt-1 text-white">{product.description}</div>
       </div>
 
       {/* buttons */}
       <div>
-        <div className="flex justify-between items-center">
-          <div className="font-bold text-white text-2xl bottom-5">
+        <div className="flex justify-between items-center mt-10 mb-0">
+          <div className="font-bold text-white text-2xl ">
             $ {product.price}
           </div>
           <button
-            className="bg-zinc-950 text-violet-500 hover:bg-violet-500 hover:text-zinc-950 font-bold
-         p-2 px-4  flex items-center justify-center rounded-xl"
+            className="bg-zinc-950 text-amber-500 hover:bg-amber-500 hover:text-black font-bold hover:font-bold
+         p-2 px-4 flex items-center justify-center rounded-full active:border-2 active:border-black"
             onClick={() => {
               addToCart(product.id);
             }}

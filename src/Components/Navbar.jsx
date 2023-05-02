@@ -72,6 +72,7 @@ a{
   }
 
   @media(min-width: 768px){
+    width: 500px;
     position: initial;
     margin: 0;
     a{

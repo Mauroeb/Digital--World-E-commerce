@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer";
 import Carousel from "./Components/Carousel";
+import Navbar from "./Components/Navbar";
 import Announcement from "./Components/Announcement";
 import ScrollButton from "./Components/ScrollButton";
 import Cart from "./Components/Cart/Cart";
@@ -47,7 +48,7 @@ const App = () => {
         <div className="bg-gray-800">
           <div>
             <FaShoppingCart
-              className="h-[1.75rem] w-[1.75rem] absolute top-[2.5rem] right-[2.5rem] z-50 text-white cursor-pointer"
+              className="h-[1.75rem] w-[1.75rem] absolute top-[4rem] right-[4.8rem] z-50 text-white cursor-pointer"
               onClick={() => {
                 setIsShowing((isShowing) => !isShowing);
                 handleNothingInCart();
@@ -81,6 +82,7 @@ const App = () => {
         </div>
 
         <Announcement />
+        <Navbar />
         <Carousel slides={slides} />
         <Content />
         <ScrollButton />

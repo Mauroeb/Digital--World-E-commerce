@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import CartContext from "../Contexts/CartContext";
 
 
-const Product = ({ product,data }) => {
+const Product = ({ product }) => {
   // funcion addToCart extraída del cartcontext para el botón
   const { addToCart } = useContext(CartContext);
   
   return (
-    <div className="w-full lg:w-80 mb-10 p-1 hover:drop-shadow-2xl bg-zinc-800 rounded-lg  shadow-lg">
+    <div className="w-[20rem] mx-auto sm:w-80 mb-10 p-1 hover:drop-shadow-2xl bg-zinc-800 rounded-lg shadow-lg">
       <div
         className="flex justify-center items-center 
         overflow-hidden group transition container mx-auto"

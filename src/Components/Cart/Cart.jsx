@@ -1,4 +1,5 @@
 import ItemCart from "./ItemCart";
+import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
 import { useContext } from "react";
 import CartContext from "../../Contexts/CartContext";
@@ -33,6 +34,8 @@ const Cart = () => {
   };
   /*FIN FUNCION SWEETALERT - ES LLAMADA EN EL ONCLICK*/
 
+
+
   return (
     <div id="cart" className="relative">
       <div
@@ -66,7 +69,7 @@ const Cart = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mx-8 text-center gap-2">
           <h5 className="text-[1.7rem] text-first_color text-bold mb-[1rem] col-span-full text-center">
-            Total: $ {totals}
+            Total: $ {totals.toFixed(2)}
           </h5>
           <div className="flex flex-col items-center sm:flex-row justify-center col-span-6 gap-[3rem]">
             <button

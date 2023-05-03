@@ -66,7 +66,7 @@ const Cart = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mx-8 text-center gap-2">
           <h5 className="text-white text-[1.4rem] text-yellow-300 text-bold col-span-full text-center">
-            Total: $ {totals}
+            Total: $ {totals.toFixed(2)}
           </h5>
           <div className="flex flex-col items-center sm:flex-row justify-center col-span-6 gap-[3rem]">
             <button

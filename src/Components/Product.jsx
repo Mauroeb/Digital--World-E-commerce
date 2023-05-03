@@ -19,12 +19,15 @@ const Product = ({ product }) => {
   
   return (
     <div className="w-[20rem] mx-auto sm:w-80 mb-10 p-1 hover:drop-shadow-2xl group bg-zinc-800 rounded-lg shadow-lg relative">
-      <FaShoppingCart className="absolute top-[1rem] right-[1rem] w-[2rem] h-[2rem] opacity-0 cursor-pointer transition-opacity 
-      group-hover:opacity-100 delay-75 text-white" onClick={() => {
-              addToCart(product.id);
-              setShowPlusIcon(true);
-              handleFaPlus()
-            }} />
+      <FaShoppingCart 
+        className="absolute w-[2rem] h-[2rem] opacity-0 text-white cursor-pointer
+        -right-12 top-6 group-hover:top-6 group-hover:right-5 delay-75  
+        group-hover:opacity-100 transition-all duration-300 transition-opacity " 
+        onClick={() => {
+        addToCart(product.id);
+        setShowPlusIcon(true);
+        handleFaPlus()
+        }} />
       {showPlusIcon ? 
       <FaPlus className="absolute top-[.5rem] right-[.5rem] text-green-500 animate-ping"/> : null} 
       
@@ -34,7 +37,7 @@ const Product = ({ product }) => {
       >
         <div className="w-full flex justify-center items-center">
           {/* image */}
-          <div className="w-full h-64 object-cover p-12 flex mx-auto justify-center items-center bg-violet-300 rounded-lg">
+          <div className="w-full h-64 object-cover p-16 flex mx-auto justify-center items-center bg-violet-400 rounded-lg">
             <img
               className="group-hover:scale-110 transition duration-300"
               src={product.image}

@@ -3,18 +3,19 @@ import styled from 'styled-components';
   
   
 export const Content = styled.div`
-   overflow-Y:scroll;
-   height: 300px;
+   overflow-wrap:scroll;
+   height: 150px;
+
    
    
 `;
   
 export const Button = styled.div`
-   position: fixed; 
+   position:fixed; 
    width: 100%;
-   left: 96%;
+   left: 87%;
    bottom: 40px;
-   height: 180px;
+   height: 230px;
    font-size: 2.5rem;
    z-index: 1;
    cursor: pointer;

@@ -1,14 +1,33 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../Contexts/CartContext";
+import { FaShoppingCart, FaPlus } from "react-icons/fa";
+
+
 
 
 const Product = ({ product }) => {
   // funcion addToCart extraída del cartcontext para el botón
   const { addToCart } = useContext(CartContext);
+  const [showPlusIcon, setShowPlusIcon] = useState(false);
+
+  const handleFaPlus = () => {
+    setTimeout( () => {
+      setShowPlusIcon(false)
+    }, 500)
+  } 
   
   return (
-    <div className="w-[20rem] mx-auto sm:w-80 mb-10 p-1 hover:drop-shadow-2xl bg-zinc-800 rounded-lg shadow-lg">
+    <div className="w-[20rem] mx-auto sm:w-80 mb-10 p-1 hover:drop-shadow-2xl group bg-zinc-800 rounded-lg shadow-lg relative">
+      <FaShoppingCart className="absolute top-[1rem] right-[1rem] w-[2rem] h-[2rem] opacity-0 cursor-pointer transition-opacity 
+      group-hover:opacity-100 delay-75 text-white" onClick={() => {
+              addToCart(product.id);
+              setShowPlusIcon(true);
+              handleFaPlus()
+            }} />
+      {showPlusIcon ? 
+      <FaPlus className="absolute top-[.5rem] right-[.5rem] text-green-500 animate-ping"/> : null} 
+      
       <div
         className="flex justify-center items-center 
         overflow-hidden group transition container mx-auto"
@@ -47,7 +66,7 @@ const Product = ({ product }) => {
               addToCart(product.id);
             }}
           >
-            Add to Cart
+            View Product
           </button>
         </div>
       </div>

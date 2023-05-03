@@ -4,7 +4,7 @@ import "tailwindcss/tailwind.css";
 import { useContext } from "react";
 import CartContext from "../../Contexts/CartContext";
 import { FaTimes } from "react-icons/fa";
-import Swal from "sweetalert2"; /*IMPORTANDO SWEET ALERT2*/
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const {
@@ -15,14 +15,13 @@ const Cart = () => {
     setIsShowing,
     updateState,
   } = useContext(CartContext);
+
   /* FUNCION PARA CALCULAR TOTAL*/
   const totals = cart.reduce((acc, curr) => {
     return acc + curr.quantity * curr.price;
   }, 0);
-  /* FIN FUNCION CALCULAR TOTAL*/
 
   /*FUNCION SWEETALERT - ES LLAMADA EN EL ONCLICK*/
-
   const succesPay = () => {
     Swal.fire({
       position: "center",
@@ -32,7 +31,6 @@ const Cart = () => {
       timer: 1500,
     });
   };
-  /*FIN FUNCION SWEETALERT - ES LLAMADA EN EL ONCLICK*/
 
 
 

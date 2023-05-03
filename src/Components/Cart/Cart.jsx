@@ -5,6 +5,7 @@ import { useContext } from "react";
 import CartContext from "../../Contexts/CartContext";
 import { FaTimes } from "react-icons/fa";
 import Swal from "sweetalert2";
+import '@sweetalert2/theme-dark/dark.css';
 
 const Cart = () => {
   const {
@@ -26,7 +27,8 @@ const Cart = () => {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "Pago Exitoso",
+      title: "Your Payment was succesfull!",
+      theme: "dark",
       showConfirmButton: false,
       timer: 1500,
     });

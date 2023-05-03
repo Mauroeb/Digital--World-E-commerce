@@ -10,15 +10,15 @@
     {
       "id": 2,
       "image": "/images/product2.png",
-      "name": "Red Dragon Webcam for great video quality",
-      "description": "High end Webcam",
+      "name": "Red Dragon Webcam",
+      "description": "Crystal clear video for streaming",
       "price": 20.99
     },
     {
       "id": 3,
       "image": "/images/product3.png",
       "name": "TF cooling Fan",
-      "description": "For a better gaming experience",
+      "description": "Keeps your PC running cool",
       "price": 30.99
     },
     {
@@ -32,7 +32,7 @@
       "id": 5,
       "image": "/images/product5.png",
       "name": "Nordic Space-grade Plastic Mat",
-      "description": "For a more comfortable experience",
+      "description": "durable and stylish, designed with space-grade materials.",
       "price": 50.99
     },
     {
@@ -46,7 +46,7 @@
       "id": 7,
       "image": "/images/product7.png",
       "name": "PWR high end gaming PC",
-      "description": "The most spec´d in the market, chosen by the best",
+      "description": "Experience the ultimate gaming performance",
       "price": 70.99
     },
     {
@@ -60,7 +60,7 @@
       "id": 9,
       "image": "/images/product9.png",
       "name": "DS LED mechanical keyboard",
-      "description": "Eye candy for a great typing and gaming experience",
+      "description": "Ultimate comfort for prolonged gaming sessions",
       "price": 90.99
     },
     {
@@ -81,7 +81,7 @@
       "id": 12,
       "image": "/images/product12.png",
       "name": "Shure condenser microphone",
-      "description": "entry level microphone for absolute begginers",
+      "description": "Entry level microphone for absolute begginers",
       "price": 120.99
     },
     {
@@ -95,7 +95,7 @@
       "id": 14,
       "image": "/images/product14.png",
       "name": "Hiper Condenser microphone",
-      "description": "the most popular choice amongst Twicht streamers",
+      "description": "The most popular choice amongst Twicht streamers",
       "price": 140.99
     },
     {
@@ -109,7 +109,7 @@
       "id": 16,
       "image": "/images/product16.png",
       "name": "XFX purple-gradient PC case",
-      "description": "optimum case for high spec´d PCs",
+      "description": "Stunning design statement",
       "price": 150.99
     },
     {
@@ -123,28 +123,28 @@
       "id": 18,
       "image": "/images/product18.png",
       "name": "Shure static microphone",
-      "description": "Excellent for gaming with friends",
+      "description": "Clear audio recording",
       "price": 170.99
     },
     {
       "id": 19,
       "image": "/images/product19.png",
       "name": "Alienware Rainbow LED cooler",
-      "description": "top of the line cooler for gaming PCs",
+      "description": "Top of the line cooler for gaming PCs",
       "price": 180.99
     },
     {
       "id": 20,
       "image": "/images/product20.png",
       "name": "Logitech fixed Webcam",
-      "description": "ideal for zoom meetings, with great audio and video quality",
+      "description": "Enhance video communication clarity",
       "price": 190.99
     },
     {
       "id": 21,
       "image": "/images/product21.png",
       "name": "Soomfon Webcam",
-      "description": "the best video and audio quality",
+      "description": "The best video and audio quality",
       "price": 200.99
     },
     {
@@ -165,23 +165,23 @@
       "id": 24,
       "image": "/images/product24.png",
       "name": "Corsair keyboard pad",
-      "description": "for maximum keyboard stability",
+      "description": "Enhanced gaming performance",
       "price": 230.99
     },
     {
       "id": 25,
       "image": "/images/product25.png",
       "name": "BENq 32' HD monitor",
-      "description": "Affordable but high quality HD monitor",
+      "description": "Immersive visual experience",
       "price": 220.99
     },
     {
       "id": 26,
       "image": "/images/product26.png",
       "name": "Alienware keyboard",
-      "description": "Top-of-the-line LED keyboard and eye-candy",
+      "description": "Precision gaming control",
       "price": 230.99
     }
-  ], 
+  ],
   "cart": []
 }

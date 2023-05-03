@@ -52,7 +52,7 @@ const Carousel = ({slides}) => {
     return (
       <div className='lg:h-[800px] md:h-[600px] h-[400px] w-{100vw} relative group'>
         <div
-          className='w-full h-full bg-cover bg-center duration-500'
+          className='w-full h-full bg-cover bg-center duration-500 rounded-b-lg'
           style={{ backgroundImage: `url(${slides[currentIndex].productImage})` }}
         ></div>
         {/* FLECHA IZQUIERDA */}

@@ -36,8 +36,8 @@ const Cart = () => {
   return (
     <div id="cart" className="relative">
       <div
-        className="absolute w-10/12 min-h-300p w-1/3 bg-gray-800 mx-auto top-20 left-1/2 transform -translate-x-1/2 
-            z-40 rounded-md w-5/6 border-2 border-gray-500"
+        className="absolute px-[1rem] py-[1.5rem] md:px-[1.5rem] w-10/12 min-h-300p bg-zinc-800 mx-auto top-[12rem] left-1/2 transform -translate-x-1/2 
+            z-40 rounded-md border-[2px] border-first_color"
       >
         <FaTimes
           className="absolute text-white z-50 h-[10em] w-[1rem] top-[-3.5rem] right-[1rem] cursor-pointer"
@@ -46,8 +46,8 @@ const Cart = () => {
           }}
         />
 
-        <h1 className="text-4xl text-center py-1 font-Roboto text-white">
-          Carrito
+        <h1 className="text-4xl text-center py-1 font-Roboto text-white mb-[1rem]">
+          Cart
         </h1>
 
         <div>
@@ -65,12 +65,13 @@ const Cart = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mx-8 text-center gap-2">
-          <h5 className="text-white text-[1.4rem] text-yellow-300 text-bold col-span-full text-center">
-            Total: $ {totals.toFixed(2)}
+          <h5 className="text-[1.7rem] text-first_color text-bold mb-[1rem] col-span-full text-center">
+            Total: $ {totals}
           </h5>
           <div className="flex flex-col items-center sm:flex-row justify-center col-span-6 gap-[3rem]">
             <button
-              className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer h-[2rem] w-[10rem] sm:me-[1rem]"
+              className="bg-zinc-950 text-first_color hover:bg-first_color hover:text-black font-bold hover:font-bold
+              p-2 px-4 flex items-center justify-center rounded-full active:border-2 active:border-black"
               onClick={() => {
                 clearCart();
                 updateState();
@@ -79,7 +80,8 @@ const Cart = () => {
               Limpiar Carrito
             </button>
             <button
-              className="bg-yellow-300 text-black font-bold py-1 px-4 rounded my-8 cursor-pointer h-[2rem] w-[10rem] sm:ms-[1rem]"
+              className="bg-zinc-950 text-first_color hover:bg-first_color hover:text-black font-bold hover:font-bold
+              p-2 px-4 flex items-center justify-center rounded-full active:border-2 active:border-black"
               onClick={() => {
                 succesPay();
                 setIsShowing((isShowing) => !isShowing);

@@ -1,5 +1,4 @@
 import ItemCart from "./ItemCart";
-import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
 import { useContext } from "react";
 import CartContext from "../../Contexts/CartContext";

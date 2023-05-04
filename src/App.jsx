@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useContext, useState } from "react";
 
 import Home from "./Pages/Home";
+import AboutUs from "./Pages/AboutUs";
 import Footer from "./Components/Footer";
 import Carousel from "./Components/Carousel";
 import Navbar from "./Components/Navbar";
@@ -11,12 +12,12 @@ import ScrollButton from "./Components/ScrollButton";
 import Cart from "./Components/Cart/Cart";
 import CartContext from "./Contexts/CartContext";
 
+
 import product1 from "./assets/Carousel-img/uno.jpg";
 import product2 from "./assets/Carousel-img/dos.jpg";
 import product3 from "./assets/Carousel-img/tres.jpg";
 import product4 from "./assets/Carousel-img/cuatro.jpg";
 import product5 from "./assets/Carousel-img/cinco.jpg";
-import Ruta from "./Route/Ruta";
 
 import { Content } from "./Styled";
 import { FaShoppingCart } from "react-icons/fa";
@@ -30,7 +31,7 @@ const slides = [
 ];
 
 const App = () => {
-  const { cart, products, isShowing, setIsShowing } = useContext(CartContext);
+  const { cart, isShowing, setIsShowing } = useContext(CartContext);
 
   const [nothingInCart, setIsNothingInCart] = useState(false);
 
@@ -65,7 +66,7 @@ const App = () => {
             ) : null}
 
             {isShowing && cart.length > 0 ? (
-              <Cart handleNothingInCart={handleNothingInCart} />
+              <Cart handleNothingInCart={handleNothingInCart} className="animate-spin" />
             ) : nothingInCart ? (
               <div className="relative">
                 <div
@@ -88,6 +89,7 @@ const App = () => {
         <ScrollButton />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
         <Footer />
       </Router>

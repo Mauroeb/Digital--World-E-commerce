@@ -18,7 +18,7 @@ const ItemCart = ({data}) => {
                 <h4 className='text-white'>{name}</h4>
                 <img className="h-[3rem] w-[3rem]" src={image} alt="" />
                 <h5 className='font-bold text-white'>${price}</h5>
-                <h5 className='text-white'>Subtotal: ${price*quantity}</h5>
+                <h5 className='text-white'>Subtotal: ${(price*quantity).toFixed(2)}</h5>
 
                 <div className='flex items-center col-span-full md:col-span-1 lg:col-span-2 xl:col-span-1'>
                     <button className="bg-gray-600 text-white font-bold py-1 px-2 my-1 rounded-full w-[2rem] h-[2rem] cursor-pointer mx-auto" 

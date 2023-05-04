@@ -8,10 +8,10 @@ const ScrollButton = () =>{
   
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 800){
+    if (scrolled > 3000){
       setVisible(true)
     } 
-    else if (scrolled <= 700){
+    else if (scrolled <= 3000){
       setVisible(false)
     }
   };
@@ -32,7 +32,7 @@ const ScrollButton = () =>{
   return (
     <Button>
      <FaArrowCircleUp onClick={scrollToTop} 
-     style={{display: visible ? 'inline' : 'none'}} />
+     style={{display: visible ?'inline' : 'none'}} />
      
     </Button>
   );

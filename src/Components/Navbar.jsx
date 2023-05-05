@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import BurguerButton from './BurguerButton'
+import { Link } from "react-router-dom"
+
 
 
 const Navbar = () => {
@@ -15,16 +17,15 @@ const Navbar = () => {
     <>
     <NavContainer>
        <div className='logo'>
-        <a href="">
-        <img src="../../public/Navbar-img/logo.png" alt="Logo" />
-        </a>
+        <Link to="/">
+          <img src="/Navbar-img/LOGO.png" alt="Logo" />
+        </Link>
         </div>
         {/* cuando clicked es true se setea la clase active y cuando no lo sea, no se setea nada */}
         <div className={`linksNav ${clicked ? 'active' : ''}`}>
-          <a href="">Home</a>
-          <a href="">Products</a>
-          <a href="">About us</a>
-          <a href="">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/products">Products</Link>
         </div>
         <BackDiv className={`initial ${clicked ? 'active' : ''}`}></BackDiv>
         <div className='burguerMenu'>

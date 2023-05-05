@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Product4 = ({products}) => {
+const ProductDetails = ({products}) => {
     const [rotate, setRotate] = useState(false);
     const [count, setCount] = useState(0);
 
@@ -141,4 +141,4 @@ const Product4 = ({products}) => {
     );
 };
 
-export default Product4;
+export default ProductDetails;

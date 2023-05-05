@@ -3,185 +3,185 @@
     {
       "id": 1,
       "image": "/images/product1.png",
-      "name": "Auriculares Gaming Teros",
-      "description": "This is product 1",
+      "name": "Teros Gaming Headphones",
+      "description": "Industry leading Headpohnes",
       "price": 10.99
     },
     {
       "id": 2,
       "image": "/images/product2.png",
-      "name": "Product 2",
-      "description": "This is product 2",
+      "name": "Red Dragon Webcam",
+      "description": "Crystal clear video for streaming",
       "price": 20.99
     },
     {
       "id": 3,
       "image": "/images/product3.png",
-      "name": "Product 3",
-      "description": "This is product 3",
+      "name": "TF cooling Fan",
+      "description": "Keeps your PC running cool",
       "price": 30.99
     },
     {
       "id": 4,
       "image": "/images/product4.png",
-      "name": "Product 4",
-      "description": "This is product 4",
+      "name": "Rzor Gaming Headphones",
+      "description": "Affordable but high quality",
       "price": 40.99
     },
     {
       "id": 5,
       "image": "/images/product5.png",
-      "name": "Product 5",
-      "description": "This is product 5",
+      "name": "Nordic Space-grade Plastic Mat",
+      "description": "durable and stylish, designed with space-grade materials.",
       "price": 50.99
     },
     {
       "id": 6,
       "image": "/images/product6.png",
-      "name": "Product 6",
-      "description": "This is product 6",
+      "name": "DZ optical gaming mouse",
+      "description": "Optic ergonomic mouse for a great gaming experience",
       "price": 60.99
     },
     {
       "id": 7,
       "image": "/images/product7.png",
-      "name": "Product 7",
-      "description": "This is product 7",
+      "name": "PWR high end gaming PC",
+      "description": "Experience the ultimate gaming performance",
       "price": 70.99
     },
     {
       "id": 8,
       "image": "/images/product8.png",
-      "name": "Product 8",
-      "description": "This is product 8",
+      "name": "Böse Noise-canceling headphones",
+      "description": "Excellent middle-tier headphones",
       "price": 80.99
     },
     {
       "id": 9,
       "image": "/images/product9.png",
-      "name": "Product 9",
-      "description": "This is product 9",
+      "name": "DS LED mechanical keyboard",
+      "description": "Ultimate comfort for prolonged gaming sessions",
       "price": 90.99
     },
     {
       "id": 10,
       "image": "/images/product10.png",
-      "name": "Product 10",
-      "description": "This is product 10",
+      "name": "Lenovo microphone",
+      "description": "The first choice for many podcasters and streamers alike",
       "price": 100.99
     },
     {
       "id": 11,
       "image": "/images/product11.png",
-      "name": "Product 11",
-      "description": "This is product 11",
+      "name": "Lenovo high-quality PC LED case",
+      "description": "Very affordable PC case, but with great quality",
       "price": 110.99
     },
     {
       "id": 12,
       "image": "/images/product12.png",
-      "name": "Product 12",
-      "description": "This is product 12",
+      "name": "Shure condenser microphone",
+      "description": "Entry level microphone for absolute begginers",
       "price": 120.99
     },
     {
       "id": 13,
       "image": "/images/product13.png",
-      "name": "Product 13",
-      "description": "This is product 13",
+      "name": "Ozarte 46' Curved Monitor",
+      "description": "For maximum inmersion and visual experience",
       "price": 130.99
     },
     {
       "id": 14,
       "image": "/images/product14.png",
-      "name": "Product 14",
-      "description": "This is product 14",
+      "name": "Hiper Condenser microphone",
+      "description": "The most popular choice amongst Twicht streamers",
       "price": 140.99
     },
     {
       "id": 15,
       "image": "/images/product15.png",
-      "name": "Product 15",
-      "description": "This is product 15",
+      "name": "TechnoTech LED keyboard",
+      "description": "Best LED Keyboard for a very affordable price",
       "price": 140.99
     },
     {
       "id": 16,
       "image": "/images/product16.png",
-      "name": "Product 16",
-      "description": "This is product 16",
+      "name": "XFX purple-gradient PC case",
+      "description": "Stunning design statement",
       "price": 150.99
     },
     {
       "id": 17,
       "image": "/images/product17.png",
-      "name": "Product 17",
-      "description": "This is product 17",
+      "name": "Osiris mousepad",
+      "description": "Extremely grippy mousepad, for a more pleasurable mouse experience",
       "price": 160.99
     },
     {
       "id": 18,
       "image": "/images/product18.png",
-      "name": "Product 18",
-      "description": "This is product 18",
+      "name": "Shure static microphone",
+      "description": "Clear audio recording",
       "price": 170.99
     },
     {
       "id": 19,
       "image": "/images/product19.png",
-      "name": "Product 19",
-      "description": "This is product 19",
+      "name": "Alienware Rainbow LED cooler",
+      "description": "Top of the line cooler for gaming PCs",
       "price": 180.99
     },
     {
       "id": 20,
       "image": "/images/product20.png",
-      "name": "Product 20",
-      "description": "This is product 20",
+      "name": "Logitech fixed Webcam",
+      "description": "Enhance video communication clarity",
       "price": 190.99
     },
     {
       "id": 21,
       "image": "/images/product21.png",
-      "name": "Product 21",
-      "description": "This is product 21",
+      "name": "Soomfon Webcam",
+      "description": "The best video and audio quality",
       "price": 200.99
     },
     {
       "id": 22,
       "image": "/images/product22.png",
-      "name": "Product 22",
-      "description": "This is product 22",
+      "name": "MSi gaming mousepad",
+      "description": "Spacious mousepad for more comfort",
       "price": 210.99
     },
     {
       "id": 23,
       "image": "/images/product23.png",
-      "name": "Product 23",
-      "description": "This is product 23",
+      "name": "ABS LED Cooler",
+      "description": "Amazing looks and functionality",
       "price": 220.99
     },
     {
       "id": 24,
       "image": "/images/product24.png",
-      "name": "Product 24",
-      "description": "This is product 24",
+      "name": "Corsair keyboard pad",
+      "description": "Enhanced gaming performance",
       "price": 230.99
     },
     {
       "id": 25,
       "image": "/images/product25.png",
-      "name": "Product 25",
-      "description": "This is product 25",
+      "name": "BENq 32' HD monitor",
+      "description": "Immersive visual experience",
       "price": 220.99
     },
     {
       "id": 26,
       "image": "/images/product26.png",
-      "name": "Product 26",
-      "description": "This is product 26",
+      "name": "Alienware keyboard",
+      "description": "Precision gaming control",
       "price": 230.99
     }
-  ], 
+  ],
   "cart": []
 }

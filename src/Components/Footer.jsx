@@ -13,7 +13,7 @@ import { mobile } from "../responsive";
 const Container = styled.div`
   display: flex;
   ${mobile({ flexDirection: "column" })};
-  background-color: #006ca0;
+  background-color:#00071A;
 `;
 
 const Left = styled.div`
@@ -23,10 +23,13 @@ const Left = styled.div`
   padding: 20px;
 `;
 
-const Logo = styled.h1``;
+const Logo = styled.h1`
+color: white;
+`;
 
 const Desc = styled.p`
   margin: 20px 0px;
+  color: white;
 `;
 
 const SocialContainer = styled.div`
@@ -53,6 +56,7 @@ const Center = styled.div`
 
 const Title = styled.h3`
   margin-bottom: 30px;
+  color: white;
 `;
 
 const List = styled.ul`
@@ -68,7 +72,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
-  color: black;
+  color:white;
   :hover {
     box-shadow: 1px 1px 10px ;
     color:#FFEFC5;
@@ -87,6 +91,7 @@ const ContactItem = styled.div`
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  color: white;
 `;
 
 const Payment = styled.img`

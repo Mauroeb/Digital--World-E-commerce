@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <div>
       <section className="">
-        <div className="mb-36 container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[1rem]">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 gap-24 md:grid-cols-2 xl:mx-0 lg:grid-cols-4 xl:grid-cols-5 max-w-sm mx-auto md:max-w-none md:mx-0">
             {products.map((products) => (
               <Product product={products} key={products.id} />
             ))}

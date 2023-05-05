@@ -100,7 +100,7 @@ const Payment = styled.img`
 
 const Footer = () => {
   return (
-    <Container>
+    <Container className="mt-36">
       <Left>
         <Logo>Digital World</Logo>
 

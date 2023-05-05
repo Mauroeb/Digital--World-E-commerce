@@ -4,6 +4,9 @@ import { useContext, useState } from "react";
 
 import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
+import ProductsPage from "./Pages/ProductsPage"
+import ProductDetails from "./Components/Routes/ProductDetails"
+
 import Footer from "./Components/Footer";
 import Carousel from "./Components/Carousel";
 import Navbar from "./Components/Navbar";
@@ -31,7 +34,7 @@ const slides = [
 ];
 
 const App = () => {
-  const { cart, isShowing, setIsShowing } = useContext(CartContext);
+  const { cart, isShowing, products, setIsShowing } = useContext(CartContext);
 
   const [nothingInCart, setIsNothingInCart] = useState(false);
 
@@ -90,6 +93,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/products" element={<ProductsPage />} />
         </Routes>
         <Footer />
       </Router>

@@ -4,6 +4,7 @@ import BurguerButton from './BurguerButton'
 import { Link } from "react-router-dom"
 
 
+
 const Navbar = () => {
 // funcion para cuando se clickea el botón se cambie el estado
   const [clicked, setClicked] = useState(false)
@@ -24,6 +25,7 @@ const Navbar = () => {
         <div className={`linksNav ${clicked ? 'active' : ''}`}>
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
+          <Link to="/products">Products</Link>
         </div>
         <BackDiv className={`initial ${clicked ? 'active' : ''}`}></BackDiv>
         <div className='burguerMenu'>

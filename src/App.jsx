@@ -23,6 +23,7 @@ import product5 from "./assets/Carousel-img/cinco.png";
 
 import { Content } from "./Styled";
 import { FaShoppingCart } from "react-icons/fa";
+import ProductDetails from "./Components/Routes/ProductDetails";
 
 const slides = [
   { id: 1, productImage: product1 },
@@ -46,7 +47,7 @@ const App = () => {
   };
 
   return (
-    <div className="overflow-hidden max-sm">
+    <div className="overflow-hidden">
       <Router>
         <div className="bg-gray-800">
           <div>
@@ -93,6 +94,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
         <Footer />
       </Router>

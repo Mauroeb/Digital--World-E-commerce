@@ -5,7 +5,6 @@ import { useContext, useState } from "react";
 import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
 import ProductsPage from "./Pages/ProductsPage"
-import ProductDetails from "./Components/Routes/ProductDetails"
 
 import Footer from "./Components/Footer";
 import Carousel from "./Components/Carousel";
@@ -16,11 +15,11 @@ import Cart from "./Components/Cart/Cart";
 import CartContext from "./Contexts/CartContext";
 
 
-import product1 from "./assets/Carousel-img/uno.jpg";
-import product2 from "./assets/Carousel-img/dos.jpg";
-import product3 from "./assets/Carousel-img/tres.jpg";
-import product4 from "./assets/Carousel-img/cuatro.jpg";
-import product5 from "./assets/Carousel-img/cinco.jpg";
+import product1 from "./assets/Carousel-img/uno.png";
+import product2 from "./assets/Carousel-img/dos.png";
+import product3 from "./assets/Carousel-img/tres.png";
+import product4 from "./assets/Carousel-img/cuatro.png";
+import product5 from "./assets/Carousel-img/cinco.png";
 
 import { Content } from "./Styled";
 import { FaShoppingCart } from "react-icons/fa";

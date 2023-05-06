@@ -5,14 +5,13 @@ import axios from "axios";
 
 export const CartContext = createContext();
 
+
+
 export const CartProvider = ({children}) => {
-/*INICIO LOCAL STORAGE*/
-/* FALTA HACER*/
-/*FIN LOCAL STORAGE*/
+
 
     const [state, dispatch] = useReducer(cartReducer, cartInitialState);
     const [isShowing, setIsShowing] = useState(false)
-
 
     const {products, cart,} = state;
 

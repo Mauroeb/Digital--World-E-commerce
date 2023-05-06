@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <>
     <NavContainer>
-       <div className='logo'>
+      <div className='logo'>
         <Link to="/">
           <img src="/Navbar-img/LOGO.png" alt="Logo" />
         </Link>

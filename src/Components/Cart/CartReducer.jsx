@@ -1,9 +1,6 @@
 
 import {TYPES} from "./Actions";
 
-
-
-
 export const cartInitialState = {
     products: [],
     cart: [],
@@ -73,7 +70,12 @@ export function cartReducer(state, action) {
             }
             
         }
-        
+        case TYPES.LOAD_CART: {
+            return {        
+                ...state.cart,
+                cart: action.payload,
+    };
+}   
         default:
             return state;
 

@@ -2,7 +2,6 @@ import ItemCart from "./ItemCart";
 import "tailwindcss/tailwind.css";
 import { useContext } from "react";
 import CartContext from "../../Contexts/CartContext";
-import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import Swal from "sweetalert2";
 import '@sweetalert2/theme-dark/dark.css';
@@ -16,25 +15,6 @@ const Cart = () => {
     setIsShowing,
     updateState,
   } = useContext(CartContext);
-
-      /*INICIO CART LOCAL STORAGE*/
-
-      const [cartItems, setCartItems] = useState([]);
-
-      useEffect(() => {
-      // Obtener el carrito almacenado en localStorage al cargar el componente
-      const storedCart = localStorage.getItem('cart');
-      if (storedCart) {
-      setCartItems(JSON.parse(storedCart));
-      }
-      }, []);
-              
-      useEffect(() => {
-      // Almacenar el carrito en localStorage cada vez que cambie
-      localStorage.setItem('cart', JSON.stringify(cartItems));
-      }, [cartItems]);
-              
-  /*FIN CART LOCAL STORAGE*/
 
   /* FUNCION PARA CALCULAR TOTAL*/
   const totals = cart.reduce((acc, curr) => {

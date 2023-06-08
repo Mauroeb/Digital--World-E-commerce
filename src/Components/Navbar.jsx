@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <>
     <NavContainer>
-       <div className='logo'>
+      <div className='logo'>
         <Link to="/">
           <img src="/Navbar-img/LOGO.png" alt="Logo" />
         </Link>
@@ -41,7 +41,7 @@ export default Navbar
 const NavContainer = styled.nav`
 .logo{
     z-index: 1000;
-    height: 70px;
+    height: 80px;
 }
 
 padding: .9rem;
@@ -117,7 +117,7 @@ a{
 const BackDiv = styled.div`
 background-color: #00071a;
 position: absolute;
-top: -1000px;
+top: -1100px;
 left: -1000px;
 width: 100%;
 height: 100%;
